@@ -24,10 +24,11 @@
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button><br>
     </form>
-    
-    <h1 class="weather h3 mb-3 font-weight-normal">City: <%= city%></h1>
-    <h1 class="weather h3 mb-3 font-weight-normal">Temprature: <%= temp%></h1>
-    <h1 class="weather h3 mb-3 font-weight-normal">Weather: <%= weather%></h1>
+
+    <h1 style="color:red"><%= (typeof title != "undefined" ? title : "")  %></h1>
+    <h1 class="weather h3 mb-3 font-weight-normal"><%= typeof city != "undefined" ? city : ""%></h1>
+    <h1 class="weather h3 mb-3 font-weight-normal"><%= typeof temp != "undefined" ? temp : ""%></h1>
+    <h1 class="weather h3 mb-3 font-weight-normal"><%= typeof weather != "undefined" ? weather : ""%></h1>
 
 
     <p class="mt-5 mb-3 text-muted">&copy; CodeInvaders 2020</p>

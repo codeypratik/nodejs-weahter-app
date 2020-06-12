@@ -31,11 +31,14 @@ app.post("", function(req, res){
     if (error){
       console.log("Error");
     }
+    else if(response.statusCode == 204){
+      res.render('main',{title: 'Not found, enter correct location'});
+    }
     else {
           console.log(response.statusCode);
           var data = JSON.parse(body);
           console.log(data.data[0].temp);
-          res.render('main',{temp:data.data[0].temp, city:data.data[0].city_name, weather: data.data[0].weather.description});
+          res.render('main',{temp:'Temprature: '+data.data[0].temp, city:'City: '+data.data[0].city_name, weather:'Weather: '+data.data[0].weather.description});
         }
   });
   console.log(req.body);
