@@ -1,4 +1,4 @@
-# nodejs-weahter-app
+# nodejs-weather-app
 A simple beginners web app built with Nodejs,Expressjs Ejs and API.
 The core foundation of this app is the use of APIs and dealing with them with using Express functionalities to handle the requests to the server.
 
